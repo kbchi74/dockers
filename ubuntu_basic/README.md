@@ -5,15 +5,15 @@ Ubuntu, It support base user creation and password setting.
 
 Copy the sources to your docker host and build the container, and to run.
 ```
-	docker build   --rm -t kbchi74/ubuntu:test .
-	docker run -it --rm --name u1  kbch74/ubuntu:test
+	docker build   --rm -t kbchi/ubuntu:test .
+	docker run -it --rm --name u1  kbchi/ubuntu:test
 ```
 Get the port that the container is listening on:
 
 ```
 # docker ps
 CONTAINER ID        IMAGE                COMMAND             CREATED             STATUS              PORTS               NAMES
-63a0ba73bf81        kbch74/ubuntu:test   "/bin/bash"         4 seconds ago       Up 3 seconds                            u1
+63a0ba73bf81        kbchi/ubuntu:test   "/bin/bash"         4 seconds ago       Up 3 seconds                            u1
 ```
 
 To test,
@@ -23,5 +23,5 @@ To test,
 To Rollback
 ```
     docker rm u1 -f
-    docker rmi kbch74/ubuntu:test
+    docker rmi kbchi/ubuntu:test
 ```
